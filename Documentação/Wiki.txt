@@ -1,0 +1,78 @@
+Antes de iniciar o programa retire os dois ficheiros da pasta Código e coloque no mesmo diretório onde está localizada a pasta data.
+
+Para iniciar o programa:
+
+-Abrir o Idle;
+-Abrir o ficheiro modoCliente.py ou modoOperador.py;
+-Carregar no F5 ou Run.
+
+Escolher opção:
+
+-Verificar as opções do menu;
+-Escolher e digitar a opção desejada;
+
+***Exemplo modoCliente.py***
+
+--- Menu ---
+1 - Lista de Pistas
+2 - Lista de Meios Mecânicos  
+3 - Consultar Zonas
+4 - Consultar Zona em Detalhe 
+5 - Consultar Pista em Detalhe
+6 - Procurar Pistas
+7 - Procurar Meios Mecânicos  
+Opção: 
+
+-Se escolheu a opção 1 vai aparecer a lista de pistas com as informações na seguinte ordem (CódigoPista, Nome, ZonaInicio, ZonaFim, Dificuldade, Estado);
+-Se escolheu a opção 2 vai aparecer a lista de meios mecânicos com as informações na seguinte ordem (Nome, ZonaPartida, ZonaChegada, Estado, Tipo);
+-Se escolheu a opção 3 vai aparecer a lista de zonas com as informações na seguinte ordem (CódigoZona, Nome, Latitude, Longitude, Altitude, Descrição);
+-Se escolheu a opção 4 tem de introduzir o código da zona e irá aparecer a lista de comodidades;
+-Se escolheu a opção 5 tem de introduzir o código da pista e irá aparecer a lista de secções que fazem parte da pista;
+-Se escolheu a opção 6 tem de introduzir o tipo de procura (Zona Inicial ou Dificuldade ou Estado);
+
+	--- Procurar Pista ---
+	Tipo de Procura:
+	1 - Zona Inicial
+	2 - Dificuldade
+	3 - Estado
+	Opção:
+
+	-Se selecionou a opção 1 terá de introduzir o código da zona e será listado as pistas que começam nessa zona.
+	-Se selecionou a opção 2 terá de escolher através do menu a dificuldade e será listada as pistas com essa dificuldade.
+	-Se selecionou a opção 3 terá de escolher através do menu o estado e será listado as pistas com esse estado.
+
+-Se escolheu a opção 7 tem de introduzir o código da zona e irá escolher através de um menu o tipo de ordenação alfabética e será listado os meios mecânicos que começam nessa zona por a ordem definida.
+
+***Exemplo modoOperador.py***
+
+--- Menu ---
+1 - Criar Zona
+2 - Criar Comodidades
+3 - Criar Secção
+4 - Criar Meio Mecânico
+5 - Criar Pista
+6 - Alterar estado pistas/meio mecânico
+7 - Emitir Bilhete
+8 - Bilhetes Emitidos
+9 - Procura Bilhete por periodo
+10 - Procura Bilhete por referência
+Opção:
+
+-Se selecionou a opção 1 tem de introduzir o código da zona que é composto por quatro letras, depois insira o nome da zona, latitude, longitude, altitude e uma descrição da zona;
+-Se selecionou a opção 2 tem de introduzir o nome da comodidade, o código da zona associada e uma descrição da comodidade;
+-Se selecionou a opção 3 tem de introduzir o código da zona onde começa a secção, depois introduza o código da zona onde acaba a secção;
+-Se selecionou a opção 4 tem de introduzir o nome do meio mecânico, o código da zona de partida, o código da zona de chegada, escolher o estado através do menu (aberto/fechado) e escolher através do outro menu o tipo de meio mecânico (ascendente,descendente,bidirecional);
+-Se selecionou a opção 5 tem de introduzir o nome da pista, o código da zona de início, o código da zona de fim, selecionar através de um menu a dificuldade, através de outro menu selecionar o estado (aberto/fechado) e identificar através do código da secção quais pertencem à pista, quando terminar digite fim para sair;
+-Se selecionou a opção 6 tem de selecionar através de um menu Pista ou Meio Mecânico de seguida digitar o código da pista ou do meio mecânico e através de um menu selecionar o estado (aberto/fechado);
+-Se selecionou a opção 7 tem de introduzir o nome do cliente, nacionalidade, o tipo de bilhete (d-diário,s-semanal,m-mensal e a-anual), inserir o dia, mês e ano de início da validade;
+-Se selecionou a opção 8 irá visualizar a lista de bilhetes emitidos com a seguinte informação (referência do bilhete, nome pessoa, nacionalidade, tipo bilhete e validade);
+-Se selecionou a opção 9 tem de introduzir o intervalo de tempo no seguinte formato (dd/mm/yyyy-dd/mm/yyyy) e irá obter a lista de bilhetes que são válidos nesse periodo completo;
+-Se selecionou a opção 10 tem de introduzir a referência do bilhete e irá visualizar o seu bilhete com as seguintes informações (referência do bilhete, nome pessoa, nacionalidade, tipo bilhete e validade) e o respetivo QrCode.
+
+Notas:
+Para o QrCode funcionar é necessária a instalação de uma biblioteca da seguinte maneira:
+
+	pip install pyqrcode
+	pip install pypng
+
+A distância das secções é calculada automaticamente com base nas coordenadas das zonas.

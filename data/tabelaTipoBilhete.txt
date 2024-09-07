@@ -1,0 +1,4 @@
+d#Diário#1#Bilhete Diário
+s#Semanal#7#Bilhete Semanal
+m#Mensal#30#Bilhete Mensal
+a#Anual#365#Passe Anual

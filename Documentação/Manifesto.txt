@@ -1,0 +1,30 @@
+modoOperador.py é utilizado pelo operador da estância com as seguintes funcionalidades:
+-Adicionar zonas.
+-Adicionar comodidades.
+-Adicionar secções.
+-Adicionar meios mecânicos.
+-Adicionar pistas.
+-Alterar estado (aberto/fechado) de uma pista ou de um meio mecânico.
+-Emitir bilhete.
+-Listagem de bilhetes emitidos.
+-Listagem de bilhetes emitidos para um dia especifico ou para um período de dias.
+-Procura de bilhete emitido por referência.
+
+modoCliente.py é utilizado pelos clientes que visitam a estância com as seguintes funcionalidades:
+-Listar as pistas.
+-Listar meios mecânicos.
+-Consultar zonas.
+-Consultar zonas em detalhes (comodidades associadas).
+-Consultar pista em detalhes (secções associadas).
+-Procurar pistas.
+-Procurar meio mecânico.
+
+Pasta data:
+-tabelaZonas.txt (CódigoZona#Nome#Latitude#Longitude#Altitude#Descrição)
+-tabelaComodidades.txt (Nome#ZonaAssociada#Descrição)
+-tabelaSeccoes.txt (CódigoSecção#ZonaInicio#ZonaFim#Distância)
+-tabelaPistas.txt (CódigoPista#Nome#ZonaInicio#ZonaFim#Dificuldade#Estado)
+-tabelaSeccoesPistas.txt (PistaAssociada#SecçãoAssociada)
+-tabelaMeiosMecanicos.txt (Nome#ZonaPartida#ZonaChegada#Estado#Tipo)
+-tabelaBilhetes.txt (ReferênciaBilhete#NomePessoa#Nacionalidade#TipoBilhete#DiaInicio#MêsInicio#AnoInicio#DiaFim#MêsFim#AnoFim)
+-tabelaTipoBilhete: (CódigoTipoBilhete#Nome#Duração#Descrição)
