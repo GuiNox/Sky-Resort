@@ -1,117 +1,88 @@
-# Sky-Resort
-College project
+Before starting the program, remove the two files from the "Código" folder and place them in the same directory where the "data" folder is located.
 
-************************************************************************************************************************************************************************************************************************************************************
-Antes de iniciar o programa retire os dois ficheiros da pasta Código e coloque no mesmo diretório onde está localizada a pasta data.
+To start the program:
 
-Para iniciar o programa:
+Open Idle;
+Open the file modoCliente.py or modoOperador.py;
+Press F5 or Run.
+Choose an option:
 
--Abrir o Idle;
--Abrir o ficheiro modoCliente.py ou modoOperador.py;
--Carregar no F5 ou Run.
+Check the menu options;
+Choose and type the desired option;
+Example modoCliente.py
 
-Escolher opção:
+--- Menu --- 1 - List of Slopes 2 - List of Mechanical Means
+3 - Consult Zones 4 - Consult Zone in Detail 5 - Consult Slope in Detail 6 - Search Slopes 7 - Search Mechanical Means
+Option:
 
--Verificar as opções do menu;
--Escolher e digitar a opção desejada;
+If you chose option 1, a list of slopes will appear with the following information (SlopeCode, Name, StartZone, EndZone, Difficulty, Status);
 
-***Exemplo modoCliente.py***
+If you chose option 2, a list of mechanical means will appear with the following information (Name, DepartureZone, ArrivalZone, Status, Type);
 
---- Menu ---
-1 - Lista de Pistas
-2 - Lista de Meios Mecânicos  
-3 - Consultar Zonas
-4 - Consultar Zona em Detalhe 
-5 - Consultar Pista em Detalhe
-6 - Procurar Pistas
-7 - Procurar Meios Mecânicos  
-Opção: 
+If you chose option 3, a list of zones will appear with the following information (ZoneCode, Name, Latitude, Longitude, Altitude, Description);
 
--Se escolheu a opção 1 vai aparecer a lista de pistas com as informações na seguinte ordem (CódigoPista, Nome, ZonaInicio, ZonaFim, Dificuldade, Estado);
--Se escolheu a opção 2 vai aparecer a lista de meios mecânicos com as informações na seguinte ordem (Nome, ZonaPartida, ZonaChegada, Estado, Tipo);
--Se escolheu a opção 3 vai aparecer a lista de zonas com as informações na seguinte ordem (CódigoZona, Nome, Latitude, Longitude, Altitude, Descrição);
--Se escolheu a opção 4 tem de introduzir o código da zona e irá aparecer a lista de comodidades;
--Se escolheu a opção 5 tem de introduzir o código da pista e irá aparecer a lista de secções que fazem parte da pista;
--Se escolheu a opção 6 tem de introduzir o tipo de procura (Zona Inicial ou Dificuldade ou Estado);
+If you chose option 4, you must enter the zone code, and a list of amenities will appear;
 
-	--- Procurar Pista ---
-	Tipo de Procura:
-	1 - Zona Inicial
-	2 - Dificuldade
-	3 - Estado
-	Opção:
+If you chose option 5, you must enter the slope code, and a list of sections that are part of the slope will appear;
 
-	-Se selecionou a opção 1 terá de introduzir o código da zona e será listado as pistas que começam nessa zona.
-	-Se selecionou a opção 2 terá de escolher através do menu a dificuldade e será listada as pistas com essa dificuldade.
-	-Se selecionou a opção 3 terá de escolher através do menu o estado e será listado as pistas com esse estado.
+If you chose option 6, you must enter the type of search (Start Zone or Difficulty or Status);
 
--Se escolheu a opção 7 tem de introduzir o código da zona e irá escolher através de um menu o tipo de ordenação alfabética e será listado os meios mecânicos que começam nessa zona por a ordem definida.
+--- Search Slope --- Search Type: 1 - Start Zone 2 - Difficulty 3 - Status Option:
 
-***Exemplo modoOperador.py***
+If you selected option 1, you will need to enter the zone code, and the slopes that start in that zone will be listed.
+If you selected option 2, you will need to choose the difficulty from the menu, and the slopes with that difficulty will be listed.
+If you selected option 3, you will need to choose the status from the menu, and the slopes with that status will be listed.
+If you chose option 7, you must enter the zone code and then choose the type of alphabetical ordering through a menu, and the mechanical means that start in that zone will be listed in the defined order.
 
---- Menu ---
-1 - Criar Zona
-2 - Criar Comodidades
-3 - Criar Secção
-4 - Criar Meio Mecânico
-5 - Criar Pista
-6 - Alterar estado pistas/meio mecânico
-7 - Emitir Bilhete
-8 - Bilhetes Emitidos
-9 - Procura Bilhete por periodo
-10 - Procura Bilhete por referência
-Opção:
+Example modoOperador.py
 
--Se selecionou a opção 1 tem de introduzir o código da zona que é composto por quatro letras, depois insira o nome da zona, latitude, longitude, altitude e uma descrição da zona;
--Se selecionou a opção 2 tem de introduzir o nome da comodidade, o código da zona associada e uma descrição da comodidade;
--Se selecionou a opção 3 tem de introduzir o código da zona onde começa a secção, depois introduza o código da zona onde acaba a secção;
--Se selecionou a opção 4 tem de introduzir o nome do meio mecânico, o código da zona de partida, o código da zona de chegada, escolher o estado através do menu (aberto/fechado) e escolher através do outro menu o tipo de meio mecânico (ascendente,descendente,bidirecional);
--Se selecionou a opção 5 tem de introduzir o nome da pista, o código da zona de início, o código da zona de fim, selecionar através de um menu a dificuldade, através de outro menu selecionar o estado (aberto/fechado) e identificar através do código da secção quais pertencem à pista, quando terminar digite fim para sair;
--Se selecionou a opção 6 tem de selecionar através de um menu Pista ou Meio Mecânico de seguida digitar o código da pista ou do meio mecânico e através de um menu selecionar o estado (aberto/fechado);
--Se selecionou a opção 7 tem de introduzir o nome do cliente, nacionalidade, o tipo de bilhete (d-diário,s-semanal,m-mensal e a-anual), inserir o dia, mês e ano de início da validade;
--Se selecionou a opção 8 irá visualizar a lista de bilhetes emitidos com a seguinte informação (referência do bilhete, nome pessoa, nacionalidade, tipo bilhete e validade);
--Se selecionou a opção 9 tem de introduzir o intervalo de tempo no seguinte formato (dd/mm/yyyy-dd/mm/yyyy) e irá obter a lista de bilhetes que são válidos nesse periodo completo;
--Se selecionou a opção 10 tem de introduzir a referência do bilhete e irá visualizar o seu bilhete com as seguintes informações (referência do bilhete, nome pessoa, nacionalidade, tipo bilhete e validade) e o respetivo QrCode.
+--- Menu --- 1 - Create Zone 2 - Create Amenities 3 - Create Section 4 - Create Mechanical Means 5 - Create Slope 6 - Change Slope/Mechanical Means Status 7 - Issue Ticket 8 - Issued Tickets 9 - Search Ticket by Period 10 - Search Ticket by Reference Option:
 
-Notas:
-Para o QrCode funcionar é necessária a instalação de uma biblioteca da seguinte maneira:
+If you selected option 1, you must enter the zone code, which consists of four letters, then enter the zone name, latitude, longitude, altitude, and a description of the zone;
+If you selected option 2, you must enter the name of the amenity, the associated zone code, and a description of the amenity;
+If you selected option 3, you must enter the code of the zone where the section starts, then enter the code of the zone where the section ends;
+If you selected option 4, you must enter the name of the mechanical means, the departure zone code, the arrival zone code, choose the status through the menu (open/closed), and choose the type of mechanical means through another menu (ascending, descending, bidirectional);
+If you selected option 5, you must enter the name of the slope, the start zone code, the end zone code, select the difficulty through a menu, select the status (open/closed) through another menu, and identify which sections belong to the slope using the section code. When finished, type "fim" to exit;
+If you selected option 6, you must select Slope or Mechanical Means through a menu, then enter the code of the slope or mechanical means and select the status (open/closed) through a menu;
+If you selected option 7, you must enter the client's name, nationality, ticket type (d-daily, s-weekly, m-monthly, a-annual), and enter the start date (day, month, year) of validity;
+If you selected option 8, you will see a list of issued tickets with the following information (ticket reference, person name, nationality, ticket type, and validity);
+If you selected option 9, you must enter the time interval in the following format (dd/mm/yyyy-dd/mm/yyyy), and you will obtain a list of tickets that are valid during that entire period;
+If you selected option 10, you must enter the ticket reference, and you will see your ticket with the following information (ticket reference, person name, nationality, ticket type, and validity) and the respective QR code.
+Notes: To make the QR code function work, you need to install a library in the following way:
 
-	pip install pyqrcode
-	pip install pypng
+bash
+Copiar código
+pip install pyqrcode
+pip install pypng
+The distance between sections is automatically calculated based on the coordinates of the zones.
 
-A distância das secções é calculada automaticamente com base nas coordenadas das zonas.
+modoOperador.py is used by the resort operator with the following functionalities:
 
-************************************************************************************************************************************************************************************************************************************************************
+Add zones.
+Add amenities.
+Add sections.
+Add mechanical means.
+Add slopes.
+Change the status (open/closed) of a slope or mechanical means.
+Issue tickets.
+List issued tickets.
+List tickets issued for a specific day or for a period of days.
+Search for a ticket by reference.
+modoCliente.py is used by customers visiting the resort with the following functionalities:
 
-modoOperador.py é utilizado pelo operador da estância com as seguintes funcionalidades:
--Adicionar zonas.
--Adicionar comodidades.
--Adicionar secções.
--Adicionar meios mecânicos.
--Adicionar pistas.
--Alterar estado (aberto/fechado) de uma pista ou de um meio mecânico.
--Emitir bilhete.
--Listagem de bilhetes emitidos.
--Listagem de bilhetes emitidos para um dia especifico ou para um período de dias.
--Procura de bilhete emitido por referência.
-
-modoCliente.py é utilizado pelos clientes que visitam a estância com as seguintes funcionalidades:
--Listar as pistas.
--Listar meios mecânicos.
--Consultar zonas.
--Consultar zonas em detalhes (comodidades associadas).
--Consultar pista em detalhes (secções associadas).
--Procurar pistas.
--Procurar meio mecânico.
-
-Pasta data:
--tabelaZonas.txt (CódigoZona#Nome#Latitude#Longitude#Altitude#Descrição)
--tabelaComodidades.txt (Nome#ZonaAssociada#Descrição)
--tabelaSeccoes.txt (CódigoSecção#ZonaInicio#ZonaFim#Distância)
--tabelaPistas.txt (CódigoPista#Nome#ZonaInicio#ZonaFim#Dificuldade#Estado)
--tabelaSeccoesPistas.txt (PistaAssociada#SecçãoAssociada)
--tabelaMeiosMecanicos.txt (Nome#ZonaPartida#ZonaChegada#Estado#Tipo)
--tabelaBilhetes.txt (ReferênciaBilhete#NomePessoa#Nacionalidade#TipoBilhete#DiaInicio#MêsInicio#AnoInicio#DiaFim#MêsFim#AnoFim)
--tabelaTipoBilhete: (CódigoTipoBilhete#Nome#Duração#Descrição)
-
-************************************************************************************************************************************************************************************************************************************************************
+List slopes.
+List mechanical means.
+Consult zones.
+Consult zones in detail (associated amenities).
+Consult slopes in detail (associated sections).
+Search for slopes.
+Search for mechanical means.
+Data Folder:
+tabelaZonas.txt (ZoneCode#Name#Latitude#Longitude#Altitude#Description)
+tabelaComodidades.txt (Name#AssociatedZone#Description)
+tabelaSeccoes.txt (SectionCode#StartZone#EndZone#Distance)
+tabelaPistas.txt (SlopeCode#Name#StartZone#EndZone#Difficulty#Status)
+tabelaSeccoesPistas.txt (AssociatedSlope#AssociatedSection)
+tabelaMeiosMecanicos.txt (Name#DepartureZone#ArrivalZone#Status#Type)
+tabelaBilhetes.txt (TicketReference#PersonName#Nationality#TicketType#StartDay#StartMonth#StartYear#EndDay#EndMonth#EndYear)
+tabelaTipoBilhete.txt (TicketTypeCode#Name#Duration#Description)
